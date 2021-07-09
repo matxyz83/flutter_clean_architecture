@@ -4,6 +4,7 @@ import 'package:presentation/presentation.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   /// since main module is dependent on Core module and Feature module,
   /// we need to init these dependent modules here
   Core.init();

@@ -1,0 +1,71 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_clean_architecture",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_clean_architecture (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "core",
+            "cwd": "core",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "core (profile mode)",
+            "cwd": "core",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "data",
+            "cwd": "data",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "data (profile mode)",
+            "cwd": "data",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "domain",
+            "cwd": "domain",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "domain (profile mode)",
+            "cwd": "domain",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "presentation",
+            "cwd": "presentation",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "presentation (profile mode)",
+            "cwd": "presentation",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        }
+    ]
+}

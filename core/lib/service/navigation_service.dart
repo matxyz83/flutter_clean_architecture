@@ -6,7 +6,6 @@ import 'package:injectable/injectable.dart';
 /// details from the widget.
 @lazySingleton
 class NavigationService {
-
   final StackRouter _router;
   NavigationService(this._router);
 
@@ -26,14 +25,14 @@ class NavigationService {
     }
   }
 
-  Future pushAndRemoveUntil(PageRouteInfo routeInfo) async {
-    try {
-      return _router.pushAndRemoveUntil(routeInfo,
-      predicate: (route) => route.isFirst);
-    } on Exception catch (e) {
-      print('Exception occurred in navigateTo: $e');
-    }
-  }
+  // Future pushAndRemoveUntil(PageRouteInfo routeInfo) async {
+  //   try {
+  //     return _router.pushAndRemoveUntil(routeInfo,
+  //     predicate: (route) => route.isFirst);
+  //   } on Exception catch (e) {
+  //     print('Exception occurred in navigateTo: $e');
+  //   }
+  // }
 
   Future<bool> pop() {
     try {

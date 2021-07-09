@@ -5,27 +5,34 @@
 // **************************************************************************
 
 import 'package:auto_route/auto_route.dart' as _i1;
+import 'package:flutter/material.dart' as _i2;
 
-import '../../features/articles/details/article_detail_screen.dart' as _i4;
-import '../../features/articles/list/article_list_screen.dart' as _i3;
-import '../../features/login/login_screen.dart' as _i2;
+import '../../features/articles/details/article_detail_screen.dart' as _i5;
+import '../../features/articles/list/article_list_screen.dart' as _i4;
+import '../../features/login/login_screen.dart' as _i3;
 
 class FeatureRouter extends _i1.RootStackRouter {
-  FeatureRouter();
+  FeatureRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
+      : super(navigatorKey);
 
   @override
   final Map<String, _i1.PageFactory> pagesMap = {
-    LoginScreenRoute.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i2.LoginScreen());
-    },
-    ArticleListScreenRoute.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i3.ArticleListScreen());
-    },
-    ArticleDetailScreenRoute.name: (entry) {
-      var args = entry.routeData.argsAs<ArticleDetailScreenRouteArgs>();
-      return _i1.MaterialPageX(
-          entry: entry, child: _i4.ArticleDetailScreen(id: args.id));
-    }
+    LoginScreenRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return _i3.LoginScreen();
+        }),
+    ArticleListScreenRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return _i4.ArticleListScreen();
+        }),
+    ArticleDetailScreenRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<ArticleDetailScreenRouteArgs>();
+          return _i5.ArticleDetailScreen(id: args.id);
+        })
   };
 
   @override
